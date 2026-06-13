@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>看房避雷互動清單｜林口預售屋新手版</title>
+  <style>
+    :root{
+      --bg:#fbf7f1; --card:#fffdf9; --ink:#2d2926; --muted:#756f68; --line:#eadfd2;
+      --accent:#b9794c; --accent2:#6f8f72; --danger:#b94b4b; --warn:#c88a2d; --good:#4f8a64;
+      --shadow:0 12px 32px rgba(76,51,31,.10); --radius:20px;
+    }
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#fbf7f1,#fffaf3 40%,#f7efe6);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",Arial,sans-serif;line-height:1.65}
+    header{padding:48px 20px 28px;position:relative;overflow:hidden} header:before{content:"";position:absolute;right:-100px;top:-100px;width:300px;height:300px;border-radius:50%;background:rgba(185,121,76,.12)}
+    .wrap{max-width:1120px;margin:0 auto} .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+    .panel{background:rgba(255,253,249,.86);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;backdrop-filter: blur(6px)}
+    h1{font-size:clamp(30px,5vw,54px);line-height:1.08;margin:0 0 14px;letter-spacing:-.04em} h2{font-size:28px;margin:0 0 14px} h3{font-size:20px;margin:22px 0 8px}.subtitle{font-size:18px;color:var(--muted);margin:0 0 18px}.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{background:#f4e6d7;color:#6e4a30;border:1px solid #ead4bd;border-radius:999px;padding:6px 10px;font-size:13px}
+    .scoreBox{display:grid;gap:12px}.scoreNum{font-size:56px;font-weight:800;color:var(--accent);line-height:1}.scoreLabel{color:var(--muted)}progress{width:100%;height:14px;appearance:none}progress::-webkit-progress-bar{background:#eadfd2;border-radius:999px}progress::-webkit-progress-value{background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:999px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    button,.btn{border:0;background:var(--accent);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}button.secondary{background:#efe4d8;color:#5c4637}button.ghost{background:transparent;color:var(--accent);border:1px solid #d9b899}button:hover{filter:brightness(.98);transform:translateY(-1px)}
+    nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.88);backdrop-filter:blur(10px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.tabs{display:flex;gap:8px;overflow:auto;padding:12px 20px}.tab{white-space:nowrap;background:#fffdf9;color:#5b4b40;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14px}.tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+    main{padding:24px 20px 70px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.col-8{grid-column:span 8}.col-7{grid-column:span 7}.col-6{grid-column:span 6}.col-5{grid-column:span 5}.col-4{grid-column:span 4}.col-12{grid-column:span 12}.grid>*{min-width:0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;min-width:0;overflow-wrap:anywhere}.small{font-size:14px;color:var(--muted)}.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;margin-right:6px}.tag.danger{background:#f7dddd;color:#883737}.tag.warn{background:#faebd3;color:#8a5b12}.tag.good{background:#dff0e5;color:#386946}.tag.info{background:#e4ebf6;color:#415d83}
+    .checklist{display:grid;gap:10px;min-width:0}.item{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid #eee2d6;border-radius:14px;background:#fffaf5;min-width:0;overflow-wrap:anywhere}.item input{margin-top:5px;transform:scale(1.2);accent-color:var(--accent);flex:0 0 auto}.item span{min-width:0}.item strong{display:block;word-break:break-word}.item.checked{opacity:.58;text-decoration:line-through}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.filter{background:#fff;border:1px solid var(--line);color:var(--muted)}.filter.active{background:var(--accent2);color:#fff;border-color:var(--accent2)}
+    details{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fffaf5;margin:10px 0;min-width:0;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:800;word-break:break-word}.script{border-left:4px solid var(--accent);padding:10px 12px;background:#fff7ed;border-radius:0 12px 12px 0;margin:8px 0;overflow-wrap:anywhere}.bad{border-left-color:var(--danger);background:#fff1f1}.goodline{border-left-color:var(--good);background:#f1fbf4}.compare{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f4eadf;position:sticky;top:51px} .metric{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #e0d2c3;padding:10px 0}.metric b{color:var(--accent)}
+    .riskCard{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:#fffaf5;margin:10px 0}.riskCard select{border:1px solid #d9c6b5;border-radius:10px;padding:8px;background:#fff}.riskHigh{background:#fff1f1}.riskMid{background:#fff8e8}.riskLow{background:#f2faf4}.quote{font-size:15px;color:#5d5149;border-left:4px solid #d9c6b5;padding-left:12px;margin:10px 0}.sources li{margin-bottom:8px}.floatPrint{position:fixed;right:18px;bottom:18px;z-index:20}.twoCol{columns:2;column-gap:22px}.twoCol li{break-inside:avoid;margin-bottom:8px}.note{background:#fff4d9;border:1px solid #edd28d;border-radius:14px;padding:12px;color:#674b14}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{display:block}.card{margin-bottom:16px}.twoCol{columns:1} h1{font-size:36px}.tabs{padding-left:12px}.panel{padding:20px}.floatPrint{display:none}}
+    @media(max-width:560px){header{padding:32px 12px 20px}main{padding:18px 12px 56px}.panel,.card{padding:16px;border-radius:16px}h2{font-size:23px}.item{padding:10px;gap:10px}.item input{transform:scale(1.08)}details{padding:10px 12px}.tabs{gap:6px}.tab{font-size:13px;padding:8px 12px}.scoreNum{font-size:44px}}
+    @media print{nav,.actions,.floatPrint,.filters,button{display:none!important}.section{display:block!important}.card,.panel{box-shadow:none;break-inside:avoid}body{background:#fff}a{color:#000}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <section class="panel">
+      <div class="pillrow"><span class="pill">預售屋新手版</span><span class="pill">林口家樂福生活圈</span><span class="pill">可勾選保存</span><span class="pill">避開話術</span></div>
+      <h1>看房前、中、後避雷互動清單</h1>
+      <p class="subtitle">給明天要看「新潤世界都心」與「立軒天蒔」的你們：先看權利內容，再看樣品屋；先問用途與實坪，再談優惠。</p>
+      <div class="actions"><button onclick="showTab('before')">從看房前開始</button><button class="secondary" onclick="window.print()">列印 / 存 PDF</button><button class="ghost" onclick="resetAll()">清除勾選</button></div>
+    </section>
+    <aside class="panel scoreBox">
+      <div><div class="scoreNum" id="scoreNum">0%</div><div class="scoreLabel">已完成檢查進度</div></div>
+      <progress id="progress" max="100" value="0"></progress>
+      <div class="small">勾選項目會存在此瀏覽器。建議看房時兩人分工：一人問、一人記錄與拍照。</div>
+      <div class="note"><b>核心原則：</b>現場不被倒數逼下訂；所有承諾都要白紙黑字；用途、主建物、履約擔保、付款表未確認前不要付不可退費用。</div>
+    </aside>
+  </div>
+</header>
+<nav><div class="wrap tabs">
+  <button class="tab active" data-tab="before" onclick="showTab('before')">看房前</button>
+  <button class="tab" data-tab="during" onclick="showTab('during')">看房中</button>
+  <button class="tab" data-tab="layout" onclick="showTab('layout')">格局檢查</button>
+  <button class="tab" data-tab="scripts" onclick="showTab('scripts')">業務話術</button>
+  <button class="tab" data-tab="after" onclick="showTab('after')">看房後</button>
+  <button class="tab" data-tab="cases" onclick="showTab('cases')">兩案專區</button>
+  <button class="tab" data-tab="risk" onclick="showTab('risk')">風險評分</button>
+  <button class="tab" data-tab="sources" onclick="showTab('sources')">資料來源</button>
+</div></nav>
+<main class="wrap">
+<section id="before" class="section active">
+  <div class="grid">
+    <div class="col-8 card"><h2>看房前：先把「不可退場成本」降到最低</h2><p class="small">目標不是變成房產專家，而是讓代銷知道你們會查、會問、會帶回家比。</p><div class="filters" data-target="beforeList"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="must">必做</button><button class="filter" data-filter="money">金流</button><button class="filter" data-filter="legal">合約</button><button class="filter" data-filter="area">環境</button></div><div class="checklist" id="beforeList"></div></div>
+    <div class="col-4 card"><h3>看房前準備包</h3><ul><li>手機備忘錄：固定問題清單</li><li>計算機：總價、單價、每月房貸</li><li>Google Maps：標記基地、全聯、家樂福、站牌、捷運 A9</li><li>相機：拍價目表、建材表、平面圖、付款表</li><li>不要帶太多現金，避免現場衝動下訂</li></ul><div class="script goodline"><b>開場白：</b><br>「我們第一次看預售屋，今天主要確認用途、坪效、付款表、履約擔保、營造商與契約內容，不會現場衝動決定。」</div></div>
+  </div>
+</section>
+<section id="during" class="section">
+  <div class="grid">
+    <div class="col-6 card"><h2>看房中：照這個順序問</h2><div class="checklist" id="duringList"></div></div>
+    <div class="col-6 card"><h2>現場要拍／拿的文件</h2><div class="checklist" id="docList"></div><details open><summary>對方不給資料怎麼辦？</summary><div class="script">「沒關係，我們今天就先不談價格。買房需要完整資料回家比對，資料齊全後我們再約第二次。」</div></details></div>
+    <div class="col-12 card"><h2>現場觀察，不只聽介紹</h2><div class="twoCol"><ul><li>業務是否願意拆：權狀坪、主建物、附屬建物、公設比、車位價格。</li><li>是否一直講未來題材，卻跳過用途、實坪、貸款、管理費。</li><li>樣品屋是否大量使用玻璃、開放式設計、縮小家具，讓空間看起來更大。</li><li>格局圖是否有標樑柱、管道間、冷氣室外機、洗衣機與冰箱位置。</li><li>是否能清楚回答住宅／事務所是否分流。</li><li>是否願意讓你們帶契約回家審閱。</li></ul></div></div>
+  </div>
+</section>
+<section id="layout" class="section">
+  <div class="grid">
+    <div class="col-7 card"><h2>格局檢查：不要只看幾房</h2><p class="small">預售屋樣品屋可能修飾暗廳、樑柱、家具尺度與收納不足。請用「一天生活」來檢查。</p><div class="checklist" id="layoutList"></div></div>
+    <div class="col-5 card"><h2>小宅常見雷點</h2><details open><summary>兩房但餐桌放不下</summary><p>很多小坪數會把餐桌畫得很小，實際入住可能只剩吧台或折疊桌。要問冰箱、餐桌、沙發、走道淨寬。</p></details><details><summary>暗廳需要長時間開燈</summary><p>客廳沒有直接採光時，白天也可能要開燈。新潤世界都心的 591 看屋心得就提到住宅部分有暗廳問題，現場要看戶別差異。</p></details><details><summary>陽台從主臥進出</summary><p>洗衣曬衣會穿過臥室，對生活動線與隱私有影響。若未來租售，也可能被買方扣分。</p></details><details><summary>次臥只是「可放床」</summary><p>請確認次臥放床後，衣櫃門、書桌椅、房門能不能正常開關。</p></details><details><summary>樑柱與管道間沒標清楚</summary><p>請業務在平面圖上圈出結構牆、樑、柱、管道間；裝潢時不能假設都能拆。</p></details></div>
+  </div>
+</section>
+<section id="scripts" class="section">
+  <div class="grid"><div class="col-12 card"><h2>業務話術拆解：聽到這些先暫停</h2><p class="small">論壇常見經驗不是說業務一定騙人，而是提醒你分辨「資訊」與「壓迫成交」。</p><div id="scriptCards"></div></div></div>
+</section>
+<section id="after" class="section">
+  <div class="grid"><div class="col-8 card"><h2>看房後：回家做 6 件事再決定</h2><div class="checklist" id="afterList"></div></div><div class="col-4 card"><h2>第二次看房建議</h2><ul><li>換不同時段：晚上、下雨天、假日或上班尖峰。</li><li>不要只回接待中心，自己走基地周圍。</li><li>把第一次問不到的資料列成缺口。</li><li>第二次才談價格，不要在資訊不足時出價。</li><li>帶懂房的人或請專業協助看契約。</li></ul><div class="script bad"><b>不要做：</b><br>只因「訂簽低、可以慢慢繳」就下訂。低首付不是低總價，交屋時還有貸款、裝潢、稅費與管理基金。</div></div></div>
+</section>
+<section id="cases" class="section">
+  <div class="grid"><div class="col-12 card compare"><h2>兩個建案專區：明天現場重點</h2><table><thead><tr><th>項目</th><th>新潤世界都心</th><th>立軒天蒔</th><th>你們要問</th></tr></thead><tbody><tr><td>產品屬性</td><td>大型住辦混合，591 資料顯示 390 戶住家、413 戶事務所、1 戶店面。</td><td>官網揭露中心商業區，第三方資料顯示有住家、店面、辦公室／事務所產品。</td><td>我們看的戶別是住宅還是事務所？是否可設籍？貸款與稅率是否不同？</td></tr><tr><td>營造商</td><td>建商官網列暐潤營造，但第三方頁面曾有待定資訊。</td><td>官網列工程營造為鴻軒營造。</td><td>請在建照、契約或附件上確認正式營造商；若變更是否書面通知？</td></tr><tr><td>社區規模</td><td>804 戶、地上 29 層、地下 6 層，公設多但管理複雜度高。</td><td>約 153～154 戶、地上 18 層、地下 5 層，規模較小但基地也較小。</td><td>住宅與事務所是否分流？一層幾戶幾梯？尖峰電梯等待？</td></tr><tr><td>格局</td><td>591 看屋心得提到住宅部分有暗廳；需看不同戶別採光與陽台動線。</td><td>坪數 16～38 坪，需確認小坪數家具尺度、採光、樑柱與收納。</td><td>請把床、沙發、餐桌、冰箱、洗衣機尺寸標在平面圖。</td></tr><tr><td>周邊</td><td>近富貴公園、全聯，車程到家樂福與 A9；偏家樂福生活圈，不是捷運站步行核心。</td><td>文化二路二段／吉祥路口，家樂福生活圈核心感強。</td><td>實測走路到便利商店、全聯、家樂福、站牌；晚上再走一次。</td></tr><tr><td>價格比較</td><td>公開資料約 56～75 萬／坪，樂居近一年成交約 60 萬上下。</td><td>公開資料約 61～73 萬／坪，樂居近一年成交約 67～68 萬上下。</td><td>價差是否反映在戶別、坪效、純住宅程度、車位與社區單純度？</td></tr></tbody></table></div>
+  <div class="col-6 card"><h2>新潤現場問題</h2><div class="checklist" id="shinList"></div></div><div class="col-6 card"><h2>立軒現場問題</h2><div class="checklist" id="liList"></div></div></div>
+</section>
+<section id="risk" class="section">
+  <div class="grid"><div class="col-7 card"><h2>風險評分器</h2><p class="small">每項用現場資訊評估。分數越高，代表越需要暫停下訂。</p><div id="riskList"></div><div class="actions"><button onclick="calcRisk()">重新計算</button></div></div><div class="col-5 card"><h2>結果</h2><div class="scoreNum" id="riskScore">0</div><div id="riskAdvice" class="note">請先選擇各項風險。</div><h3>評分解讀</h3><ul><li><b>0–8：</b>資訊相對清楚，但仍要審約。</li><li><b>9–17：</b>有疑點，建議二訪與補資料。</li><li><b>18 以上：</b>不建議當天付不可退費用。</li></ul></div></div>
+</section>
+<section id="sources" class="section">
+  <div class="grid"><div class="col-12 card"><h2>資料來源與使用方式</h2><p>此頁面綜合官方法規、建案官網、591／樂居等建案資料，以及 Dcard、Mobile01 等論壇經驗。論壇資訊屬於個人經驗與討論，不等於事實保證；正式判斷仍以建照、契約、謄本、建材表、價目表、付款表與政府公告為準。</p><ul class="sources"><li>內政部「預售屋買賣定型化契約應記載及不得記載事項」：至少 5 日契約審閱期、廣告義務、履約擔保等。</li><li>行政院／內政部預售屋買賣契約書範本與簽約注意事項。</li><li>Dcard 購屋板：預售屋注意事項、地籍圖、土地使用分區、淹水潛勢、代銷話術等討論。</li><li>Mobile01：看預售屋技巧、斡旋與限時話術、看一次是否下訂、預售屋工程與驗屋經驗。</li><li>591 新建案與看屋心得：新潤世界都心、立軒天蒔基本資料與格局／社區評論。</li><li>樂居：兩案成交行情與看屋筆記。</li></ul><div class="script">建議你把本頁列印成 PDF，並把現場拿到的付款表、平面圖、建材表一起存成一個資料夾。看完後用「缺資料清單」回問業務，而不是只問「還能便宜多少」。</div></div></div>
+</section>
+</main>
+<button class="floatPrint" onclick="window.print()">列印</button>
+<script>
+const lists={
+ beforeList:[['must','查實價登錄與同生活圈案價，不只看開價。'],['must','確認兩案土地使用分區、用途規劃：住宅、事務所、店面是否混合。'],['legal','先知道預售屋契約至少有 5 日審閱期，不接受現場逼簽。'],['legal','確認預售屋應有履約擔保，明天要問是哪一種與哪家銀行。'],['money','先算安全總預算：自備款＋交屋雜費＋裝潢家電＋管理基金＋貸款不足備用金。'],['money','先設定「今天不付不可退費用」的共同底線。'],['area','看地圖標記：基地、全聯、家樂福、便利商店、公園、站牌、A9、交流道。'],['area','查淹水潛勢、噪音、附近工地、未來空地或嫌惡設施。'],['must','把必問問題存在手機，避免被簡報流程帶走。']],
+ duringList:[['must','第一題先問：我們看的這戶登記用途是住宅還是事務所？'],['must','請業務拆坪數：權狀坪、主建物、附屬建物、共有公設、車位坪數。'],['must','問住宅、事務所、店面是否分大廳、電梯、垃圾間、包裹區與公設。'],['money','拿完整付款表：訂金、簽約金、工程款、交屋款、車位款、代書規費。'],['money','問貸款：預估成數、配合銀行、鑑價不足由誰補、事務所貸款是否不同。'],['legal','問履約擔保：形式、銀行、專戶名稱、款項是否進信託專戶。'],['must','問營造商：正式營造廠、建照是否已載明、若異動是否書面通知。'],['must','問管理費：住宅／事務所／店面是否同標準，車位管理費多少。'],['area','離開接待中心後自行走基地一圈，觀察人行道、車流、噪音、路燈。']],
+ docList:[['legal','完整買賣契約範本。'],['legal','建材設備表。'],['legal','建造執照字號與影本或可查資料。'],['legal','履約擔保文件或契約條款。'],['money','價目表與付款表。'],['money','車位平面圖、車位價格、尺寸與權利範圍。'],['must','各戶平面圖，包含樑柱、管道間、冷氣室外機位置。'],['must','公設配置圖、管理規約草案。'],['must','廣告圖面、基地位置圖、銷售承諾截圖。']],
+ layoutList:[['must','客廳是否有直接採光？暗廳是否能接受？'],['must','玄關是否有鞋櫃與落塵區？門開後是否卡櫃子？'],['must','冰箱、餐桌、沙發、電視牆距離是否合理？'],['must','廚房動線：備餐檯、插座、抽油煙、瓦斯或 IH、垃圾桶位置。'],['must','主臥放雙人床後，兩側與床尾是否還能走？'],['must','次臥放床後，衣櫃、書桌、門片是否能正常開？'],['must','浴室是否開窗？無窗浴室抽風與除濕怎麼處理？'],['must','洗衣機與曬衣位置；是否需要穿越主臥到陽台？'],['must','樑柱是否壓床、壓沙發、壓餐桌？'],['must','冷氣室外機位置是否吃掉陽台，維修是否方便？'],['must','管道間是否靠臥室，未來是否有排水噪音？'],['must','插座、網路孔、電箱、弱電箱位置是否合理。']],
+ afterList:[['must','把現場拿到的資料整理成：價格、坪數、用途、貸款、車位、合約、風險。'],['money','用最保守情境重算每月房貸：利率上升、貸款成數不足、裝潢超支。'],['must','回查實價登錄：同棟、同區、同坪數、是否含車位，避免被開價影響。'],['legal','逐條對照內政部預售屋契約範本，標出不懂或不利條款。'],['area','晚上或尖峰再去基地周邊一次，檢查交通、路燈、噪音、商家營業狀態。'],['must','把缺資料清單傳給業務，要求書面回覆。'],['must','至少比較 2–3 個同生活圈建案，避免只被單一案場節奏帶走。'],['legal','若要下訂，確認訂金／斡旋金是否可退、退費條件、收據品名與金流帳戶。']],
+ shinList:[['must','住宅與事務所是否分棟、分梯、分大廳？'],['must','總戶數 804 戶與車位 649 個，剩餘車位與車位配比怎麼處理？'],['must','大型公設未來維護費用與管理費每坪多少？'],['must','不同戶別是否暗廳？陽台是否需從主臥進出？'],['legal','營造商請用建照／契約確認：暐潤營造是否為正式版本？']],
+ liList:[['must','中心商業區下，我們看的戶別正式用途是什麼？'],['must','住宅、事務所、店面是否共用出入口與公設？'],['must','基地 471 坪下，車道、臨停、機車位、垃圾區是否夠用？'],['money','單價較新潤高，價差對應到哪些實質優勢？'],['legal','鴻軒營造是否已寫入建照／契約？保固由誰負責？']]
+};
+const scripts=[
+ ['danger','「這戶很多人在看，今天不下訂就沒了」','可能是真的熱門，也可能是製造稀缺。','請先提供完整價目表、付款表與契約，我們回去審閱後再決定；如果真的賣掉，就是緣分不夠。'],
+ ['danger','「先付斡旋／小訂卡位，反正可以談」','先付錢後談，主控權會變低；要確認可退條件。','請把可退條件、期限、收據名目、匯款帳戶寫清楚；沒有書面我們不付。'],
+ ['warn','「我自己也買／幫小孩買」','論壇常見提到這類建立信任話術；不代表房子一定適合你。','恭喜你，但我們還是依照用途、實坪、付款與合約判斷。'],
+ ['warn','「未來 AI 園區／道路開通／商圈一定漲」','未來題材可參考，但不能取代現在生活機能與價格安全邊際。','請問目前已核定、已動工、已公告的資料是哪一份？預計日期與不確定性是什麼？'],
+ ['danger','「主管只給今天這個價」','限時折扣常用來壓縮思考時間。','我們不做當天決策。請把價格條件寫下來，若明天不適用也沒關係。'],
+ ['warn','「公設很豪華，生活像飯店」','公設越多，未來維護成本越高；也要看使用率與收費。','管理費每坪多少？哪些公設另收費？事務所戶是否能用？維護基金怎麼估？'],
+ ['danger','「這是低首付，很輕鬆」','低首付不等於低總價；交屋時貸款、裝潢、稅費一次來。','請列完整現金流，含交屋款、管理基金、代書規費、貸款不足補款。'],
+ ['warn','「樣品屋就是未來可以長這樣」','樣品屋通常含裝潢、改門片、縮小家具、加燈光。','請標出交屋標配與裝潢示意，哪些不包含請寫在圖上。'],
+ ['danger','「合約都一樣，不用看那麼細」','官方定型化契約有應記載與不得記載事項，買方本來就應審閱。','我們會帶回家逐條看，這是買方權利。']
+];
+const risks=['用途不是明確住宅或業務回答模糊','住宅／事務所／店面未分流','主建物坪數與實際居住感落差大','付款表不完整或貸款不足責任不清','履約擔保說不清楚','營造商／建照資料無法文件確認','管理費、公設維護、車位費用不清楚','業務強力要求當天下訂或付斡旋','周邊機能需靠車且你們生活不習慣','契約不給帶回家審閱'];
+function renderList(id){const el=document.getElementById(id); if(!el) return; el.innerHTML=''; lists[id].forEach((x,i)=>{const key=id+'_'+i; const checked=localStorage.getItem(key)==='1'; const div=document.createElement('label'); div.className='item '+(checked?'checked':''); div.dataset.cat=x[0]; div.innerHTML=`<input type="checkbox" ${checked?'checked':''} onchange="toggleItem(this,'${key}')"><span><strong>${x[1]}</strong><small class="small">${label(x[0])}</small></span>`; el.appendChild(div);});}
+function label(c){return {must:'必做',money:'金流',legal:'合約／法律',area:'環境'}[c]||c}
+function toggleItem(cb,key){localStorage.setItem(key,cb.checked?'1':'0'); cb.closest('.item').classList.toggle('checked',cb.checked); updateProgress();}
+function updateProgress(){let total=0,done=0; Object.keys(lists).forEach(id=>lists[id].forEach((_,i)=>{total++; if(localStorage.getItem(id+'_'+i)==='1') done++;})); const p= total?Math.round(done/total*100):0; document.getElementById('scoreNum').textContent=p+'%'; document.getElementById('progress').value=p;}
+function renderScripts(){const el=document.getElementById('scriptCards'); el.innerHTML=scripts.map(s=>`<details open><summary><span class="tag ${s[0]}">${s[0]==='danger'?'高風險':'注意'}</span>${s[1]}</summary><div class="quote"><b>可能問題：</b>${s[2]}</div><div class="script goodline"><b>你可以回：</b><br>${s[3]}</div></details>`).join('')}
+function renderRisks(){const el=document.getElementById('riskList'); el.innerHTML=risks.map((r,i)=>`<div class="riskCard"><div><b>${i+1}. ${r}</b><div class="small">0 = 無疑慮，1 = 有點疑慮，2 = 明顯疑慮，3 = 無法接受</div></div><select id="risk_${i}" onchange="calcRisk()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>`).join(''); risks.forEach((_,i)=>{const v=localStorage.getItem('risk_'+i); if(v!==null) document.getElementById('risk_'+i).value=v;}); calcRisk();}
+function calcRisk(){let sum=0; risks.forEach((_,i)=>{const el=document.getElementById('risk_'+i); if(el){localStorage.setItem('risk_'+i,el.value); sum+=Number(el.value);}}); const score=document.getElementById('riskScore'); if(!score) return; score.textContent=sum; const adv=document.getElementById('riskAdvice'); if(sum>=18){adv.textContent='高風險：不建議當天付不可退費用。先補齊文件、二訪、找人審約。';adv.className='script bad'} else if(sum>=9){adv.textContent='中風險：可繼續了解，但不要被限時話術逼下訂。把疑點逐一書面確認。';adv.className='note'} else {adv.textContent='相對可控：資訊較清楚，但仍應帶契約回家審閱、查實價與重算現金流。';adv.className='script goodline'} }
+function showTab(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===id)); window.scrollTo({top:0,behavior:'smooth'});}
+function resetAll(){if(confirm('確定清除所有勾選與風險評分？')){Object.keys(localStorage).forEach(k=>{if(k.includes('List_')||k.startsWith('risk_')||k.startsWith('shinList_')||k.startsWith('liList_'))localStorage.removeItem(k)}); init();}}
+function initFilters(){document.querySelectorAll('.filters').forEach(f=>{f.addEventListener('click',e=>{if(!e.target.classList.contains('filter'))return; f.querySelectorAll('.filter').forEach(b=>b.classList.remove('active')); e.target.classList.add('active'); const filter=e.target.dataset.filter; document.querySelectorAll('#'+f.dataset.target+' .item').forEach(it=>it.style.display=(filter==='all'||it.dataset.cat===filter)?'flex':'none');});});}
+function init(){Object.keys(lists).forEach(renderList); renderScripts(); renderRisks(); updateProgress(); initFilters();}
+init();
+</script>
+</body>
+</html>
