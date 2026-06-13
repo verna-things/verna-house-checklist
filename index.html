@@ -18,24 +18,16 @@
     .scoreBox{display:grid;gap:12px}.scoreNum{font-size:56px;font-weight:800;color:var(--accent);line-height:1}.scoreLabel{color:var(--muted)}progress{width:100%;height:14px;appearance:none}progress::-webkit-progress-bar{background:#eadfd2;border-radius:999px}progress::-webkit-progress-value{background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:999px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     button,.btn{border:0;background:var(--accent);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}button.secondary{background:#efe4d8;color:#5c4637}button.ghost{background:transparent;color:var(--accent);border:1px solid #d9b899}button:hover{filter:brightness(.98);transform:translateY(-1px)}
     nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.88);backdrop-filter:blur(10px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.tabs{display:flex;gap:8px;overflow:auto;padding:12px 20px}.tab{white-space:nowrap;background:#fffdf9;color:#5b4b40;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14px}.tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-    main{padding:24px 20px 70px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.col-8{grid-column:span 8}.col-7{grid-column:span 7}.col-6{grid-column:span 6}.col-5{grid-column:span 5}.col-4{grid-column:span 4}.col-12{grid-column:span 12}.grid>*{min-width:0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;min-width:0;overflow-wrap:anywhere}.small{font-size:14px;color:var(--muted)}.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;margin-right:6px}.tag.danger{background:#f7dddd;color:#883737}.tag.warn{background:#faebd3;color:#8a5b12}.tag.good{background:#dff0e5;color:#386946}.tag.info{background:#e4ebf6;color:#415d83}
-    .checklist{display:grid;gap:10px;min-width:0}.item{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid #eee2d6;border-radius:14px;background:#fffaf5;min-width:0;overflow-wrap:anywhere}.item input{margin-top:5px;transform:scale(1.2);accent-color:var(--accent);flex:0 0 auto}.item span{min-width:0}.item strong{display:block;word-break:break-word}.item.checked{opacity:.58;text-decoration:line-through}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.filter{background:#fff;border:1px solid var(--line);color:var(--muted)}.filter.active{background:var(--accent2);color:#fff;border-color:var(--accent2)}
-    details{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fffaf5;margin:10px 0;min-width:0;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:800;word-break:break-word}.script{border-left:4px solid var(--accent);padding:10px 12px;background:#fff7ed;border-radius:0 12px 12px 0;margin:8px 0;overflow-wrap:anywhere}.bad{border-left-color:var(--danger);background:#fff1f1}.goodline{border-left-color:var(--good);background:#f1fbf4}.compare{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f4eadf;position:sticky;top:51px} .metric{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #e0d2c3;padding:10px 0}.metric b{color:var(--accent)}
-    .riskWrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:16px;align-items:start}.riskWrap>*{min-width:0}.riskCard{display:grid;grid-template-columns:minmax(0,1fr) minmax(86px,auto);gap:12px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:#fffaf5;margin:10px 0;min-width:0;overflow-wrap:anywhere}.riskCard select{width:100%;max-width:96px;border:1px solid #d9c6b5;border-radius:10px;padding:8px;background:#fff}.riskHigh{background:#fff1f1}.riskMid{background:#fff8e8}.riskLow{background:#f2faf4}.quote{font-size:15px;color:#5d5149;border-left:4px solid #d9c6b5;padding-left:12px;margin:10px 0}.sources li{margin-bottom:8px}.floatPrint{position:fixed;right:18px;bottom:18px;z-index:20}.twoCol{columns:2;column-gap:22px}.twoCol li{break-inside:avoid;margin-bottom:8px}.note{background:#fff4d9;border:1px solid #edd28d;border-radius:14px;padding:12px;color:#674b14}
+    main{padding:24px 20px 70px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.col-8{grid-column:span 8}.col-6{grid-column:span 6}.col-4{grid-column:span 4}.col-12{grid-column:span 12}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}.small{font-size:14px;color:var(--muted)}.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;margin-right:6px}.tag.danger{background:#f7dddd;color:#883737}.tag.warn{background:#faebd3;color:#8a5b12}.tag.good{background:#dff0e5;color:#386946}.tag.info{background:#e4ebf6;color:#415d83}
+    .checklist{display:grid;gap:10px}.item{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid #eee2d6;border-radius:14px;background:#fffaf5}.item input{margin-top:5px;transform:scale(1.2);accent-color:var(--accent)}.item strong{display:block}.item.checked{opacity:.58;text-decoration:line-through}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.filter{background:#fff;border:1px solid var(--line);color:var(--muted)}.filter.active{background:var(--accent2);color:#fff;border-color:var(--accent2)}
+    details{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fffaf5;margin:10px 0}summary{cursor:pointer;font-weight:800}.script{border-left:4px solid var(--accent);padding:10px 12px;background:#fff7ed;border-radius:0 12px 12px 0;margin:8px 0}.bad{border-left-color:var(--danger);background:#fff1f1}.goodline{border-left-color:var(--good);background:#f1fbf4}.compare{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f4eadf;position:sticky;top:51px} .metric{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #e0d2c3;padding:10px 0}.metric b{color:var(--accent)}
+    .riskCard{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:#fffaf5;margin:10px 0}.riskCard select{border:1px solid #d9c6b5;border-radius:10px;padding:8px;background:#fff}.riskHigh{background:#fff1f1}.riskMid{background:#fff8e8}.riskLow{background:#f2faf4}.quote{font-size:15px;color:#5d5149;border-left:4px solid #d9c6b5;padding-left:12px;margin:10px 0}.sources li{margin-bottom:8px}.floatPrint{position:fixed;right:18px;bottom:18px;z-index:20}.twoCol{columns:2;column-gap:22px}.twoCol li{break-inside:avoid;margin-bottom:8px}.note{background:#fff4d9;border:1px solid #edd28d;border-radius:14px;padding:12px;color:#674b14}
 
-    .layoutGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:16px;align-items:start}
-    .layoutGrid>*{min-width:0}
-    .layoutMain,.layoutSide{min-width:0}
-    .reviewGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .reviewGrid>*{min-width:0}
-    .reviewCard{background:#fffaf5;border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0;overflow-wrap:anywhere}
-    .reviewCard h3{margin-top:0}
-    .reviewList{padding-left:20px;margin:8px 0}.reviewList li{margin-bottom:8px}
-    @media(max-width:900px){.layoutGrid,.reviewGrid,.riskWrap{grid-template-columns:1fr}.layoutGrid .card,.reviewGrid .card,.riskWrap .card{margin-bottom:16px}}
-    @media(max-width:520px){.riskCard{grid-template-columns:1fr}.riskCard select{max-width:none}.scoreNum{font-size:42px}}
-    @media(max-width:560px){.reviewCard{padding:12px;border-radius:14px}}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{display:block}.card{margin-bottom:16px}.twoCol{columns:1} h1{font-size:36px}.tabs{padding-left:12px}.panel{padding:20px}.floatPrint{display:none}}
-    @media(max-width:560px){header{padding:32px 12px 20px}main{padding:18px 12px 56px}.panel,.card{padding:16px;border-radius:16px}h2{font-size:23px}.item{padding:10px;gap:10px}.item input{transform:scale(1.08)}details{padding:10px 12px}.tabs{gap:6px}.tab{font-size:13px;padding:8px 12px}.scoreNum{font-size:44px}}
+    .reviewGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.reviewCard{border:1px solid var(--line);border-radius:18px;background:#fffaf5;padding:18px;min-width:0;overflow-wrap:anywhere}.reviewCard h3{margin-top:0}.reviewList{padding-left:20px;margin:10px 0 0}.reviewList li{margin:8px 0}.reviewSplit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}.sentimentBox{border-radius:16px;padding:14px;border:1px solid var(--line);min-width:0}.sentimentBox.positive{background:#f2faf4;border-color:#cfe6d5}.sentimentBox.negative{background:#fff1f1;border-color:#efcdcd}.sentimentBox h4{margin:0 0 8px;font-size:17px}.riskSignal{border-left:4px solid var(--warn);background:#fff8e8;border-radius:0 14px 14px 0;padding:12px;margin:12px 0}.verifyBox{background:#f6f1ea;border:1px solid #e6d8c8;border-radius:16px;padding:14px;margin-top:12px}.reviewMeta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.miniPill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;background:#fff;color:var(--muted)}
+    .riskWrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:16px;align-items:start}.riskWrap>*{min-width:0}.riskCard{display:grid;grid-template-columns:minmax(0,1fr) minmax(92px,auto);gap:12px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:#fffaf5;margin:10px 0;min-width:0;overflow-wrap:anywhere}.riskCard select{width:100%;max-width:104px;border:1px solid #d9c6b5;border-radius:10px;padding:8px;background:#fff}
+    .reviewCard .riskSignal{font-size:15px}.sentimentBox.negative li b{color:#8a2d2d}.sentimentBox.positive li b{color:#2f6b3d}
+    @media(max-width:900px){.reviewGrid,.reviewSplit,.riskWrap{grid-template-columns:1fr}.riskCard{grid-template-columns:1fr}.riskCard select{max-width:none}.reviewCard{padding:16px}}
+    @media(max-width:850px){.hero{grid-template-columns:1fr}.grid{display:block}.card{margin-bottom:16px}.twoCol{columns:1} h1{font-size:36px}.tabs{padding-left:12px}.panel{padding:20px}.floatPrint{display:none}}
     @media print{nav,.actions,.floatPrint,.filters,button{display:none!important}.section{display:block!important}.card,.panel{box-shadow:none;break-inside:avoid}body{background:#fff}a{color:#000}}
   </style>
 </head>
@@ -62,8 +54,8 @@
   <button class="tab" data-tab="layout" onclick="showTab('layout')">格局檢查</button>
   <button class="tab" data-tab="scripts" onclick="showTab('scripts')">業務話術</button>
   <button class="tab" data-tab="after" onclick="showTab('after')">看房後</button>
-  <button class="tab" data-tab="reviews" onclick="showTab('reviews')">評價整理</button>
   <button class="tab" data-tab="cases" onclick="showTab('cases')">兩案專區</button>
+  <button class="tab" data-tab="reviews" onclick="showTab('reviews')">評價整理</button>
   <button class="tab" data-tab="risk" onclick="showTab('risk')">風險評分</button>
   <button class="tab" data-tab="sources" onclick="showTab('sources')">資料來源</button>
 </div></nav>
@@ -83,8 +75,8 @@
 </section>
 <section id="layout" class="section">
   <div class="layoutGrid">
-    <div class="card"><h2>格局檢查：不要只看幾房</h2><p class="small">預售屋樣品屋可能修飾暗廳、樑柱、家具尺度與收納不足。請用「一天生活」來檢查。</p><div class="checklist" id="layoutList"></div></div>
-    <div class="card"><h2>小宅常見雷點</h2><div class="layoutTips"><details open><summary>兩房但餐桌放不下</summary><p>很多小坪數會把餐桌畫得很小，實際入住可能只剩吧台或折疊桌。要問冰箱、餐桌、沙發、走道淨寬。</p></details><details><summary>暗廳需要長時間開燈</summary><p>客廳沒有直接採光時，白天也可能要開燈。新潤世界都心的 591 看屋心得就提到住宅部分有暗廳問題，現場要看戶別差異。</p></details><details><summary>陽台從主臥進出</summary><p>洗衣曬衣會穿過臥室，對生活動線與隱私有影響。若未來租售，也可能被買方扣分。</p></details><details><summary>次臥只是「可放床」</summary><p>請確認次臥放床後，衣櫃門、書桌椅、房門能不能正常開關。</p></details><details><summary>樑柱與管道間沒標清楚</summary><p>請業務在平面圖上圈出結構牆、樑、柱、管道間；裝潢時不能假設都能拆。</p></details></div></div>
+    <div class="layoutMain card"><h2>格局檢查：不要只看幾房</h2><p class="small">預售屋樣品屋可能修飾暗廳、樑柱、家具尺度與收納不足。請用「一天生活」來檢查。</p><div class="checklist" id="layoutList"></div></div>
+    <div class="layoutSide card"><h2>小宅常見雷點</h2><details open><summary>兩房但餐桌放不下</summary><p>很多小坪數會把餐桌畫得很小，實際入住可能只剩吧台或折疊桌。要問冰箱、餐桌、沙發、走道淨寬。</p></details><details><summary>暗廳需要長時間開燈</summary><p>客廳沒有直接採光時，白天也可能要開燈。新潤世界都心的 591 看屋心得就提到住宅部分有暗廳問題，現場要看戶別差異。</p></details><details><summary>陽台從主臥進出</summary><p>洗衣曬衣會穿過臥室，對生活動線與隱私有影響。若未來租售，也可能被買方扣分。</p></details><details><summary>次臥只是「可放床」</summary><p>請確認次臥放床後，衣櫃門、書桌椅、房門能不能正常開關。</p></details><details><summary>樑柱與管道間沒標清楚</summary><p>請業務在平面圖上圈出結構牆、樑、柱、管道間；裝潢時不能假設都能拆。</p></details></div>
   </div>
 </section>
 <section id="scripts" class="section">
@@ -97,52 +89,163 @@
 <section id="reviews" class="section">
   <div class="grid">
     <div class="col-12 card">
-      <h2>評價整理：先看網路討論怎麼說，再看你要怎麼驗證</h2>
-      <p class="small">這裡把 Mobile01、Dcard、591／樂居看屋心得中常見的討論，整理成「網友在意的主題」。它不是判定好壞，而是幫你看出大家到底在稱讚什麼、擔心什麼、爭論什麼。</p>
-      <div class="note"><b>閱讀方法：</b>先看「討論分類」抓大方向，再看「你明天可以做什麼」把網路心得轉成現場可問、可看文件、可實測的問題。</div>
+      <h2>評價整理：不要包裝，直接看風險</h2>
+      <p class="small">這區把目前可查到的 Mobile01、Dcard、591、樂居與公開建案資料整理成「正向評論」與「負面／風險議題」。論壇屬個人心得，不能等於事實；但只要被多人討論或能被文件驗證，就先列成明天必查風險。</p>
+      <div class="note"><b>閱讀方式：</b>先看每張卡片上方的「一眼結論」，再看紅色風險清單。紅色不代表一定不能買，而是代表你明天沒有問清楚就不要下訂。</div>
     </div>
+
     <div class="col-12 card">
-      <h2>新潤世界都心｜網友評論與心得分類</h2>
+      <h2>兩個建案：正向評論 vs 負面風險</h2>
       <div class="reviewGrid">
-        <div class="reviewCard"><h3>1. 地點與生活機能</h3><p><span class="tag good">較常被肯定</span>討論多會提到它在林口家樂福生活圈，生活機能比 A7 或較外圍區域成熟，採買、吃東西、全聯／家樂福、公園都比較好想像。</p><p><span class="tag warn">延伸疑慮</span>不是 A9 捷運站步行核心，通勤仍要實測公車、騎車、開車與雨天動線。</p></div>
-        <div class="reviewCard"><h3>2. 價格與總價帶</h3><p><span class="tag good">較常被肯定</span>相較同區部分新案，網友心得會提到總價相對容易入手，尤其小坪數產品對首購族有吸引力。</p><p><span class="tag warn">延伸疑慮</span>低總價不等於便宜，仍要拆主建物、車位、事務所／住宅用途、公設比與未來轉手客群。</p></div>
-        <div class="reviewCard"><h3>3. 住辦混合與社區複雜度</h3><p><span class="tag danger">討論焦點</span>網路討論最常被拿出來比較的是「大型住商／住辦混合、高樓、戶數多」。這不是絕對缺點，但代表管理與出入人口會是自住者的重要風險。</p><p><span class="tag warn">延伸疑慮</span>事務所是否分棟、分梯、分櫃台、分垃圾與包裹動線，會直接影響居住感。</p></div>
-        <div class="reviewCard"><h3>4. 格局與小坪數實住性</h3><p><span class="tag info">心得方向</span>看屋心得多會用「小坪數但機能完整」描述，但也會提到小宅需要特別看暗廳、次臥尺度、陽台動線與家具尺寸。</p><p><span class="tag warn">延伸疑慮</span>三房若室內約 22 坪，要實際檢查每個房間是不是「真的能睡＋能收納＋能走動」。</p></div>
-        <div class="reviewCard"><h3>5. 品牌與案場包裝</h3><p><span class="tag info">討論方向</span>新潤品牌能見度高，網友會把它視為有一定市場辨識度的建商；但也有人提醒不能只看品牌。</p><p><span class="tag warn">延伸疑慮</span>預售屋最終仍要回到本案營造商、履約擔保、保固與契約附件，不是品牌大就省略查證。</p></div>
-        <div class="reviewCard"><h3>6. 未來題材</h3><p><span class="tag info">討論方向</span>AI 園區、ASML、林口產業發展常被放進銷售敘事，也會被網友拿來討論保值與轉手。</p><p><span class="tag warn">延伸疑慮</span>未來題材是加分，不是付款依據。自住要先確認現在的通勤、採買、噪音、採光與管理。</p></div>
+        <div class="reviewCard">
+          <h3>新潤世界都心｜一眼結論</h3>
+          <div class="reviewMeta"><span class="miniPill">價格較好入手</span><span class="miniPill">大型住辦混合</span><span class="miniPill">車位配比風險</span><span class="miniPill">小坪數實住性要查</span></div>
+          <div class="riskSignal"><b>最需要注意：</b>這案最大問題不是品牌，而是「大型社區＋住辦混合＋車位非一戶一位＋小坪數格局」。你們若是自住，要先確認生活單純度與實際可用坪數。</div>
+          <div class="reviewSplit">
+            <div class="sentimentBox positive">
+              <h4>正向評論／被看好的點</h4>
+              <ul class="reviewList">
+                <li><b>單價相對同區新案較低：</b>樂居資料顯示新潤世界都心平均成交價約 60.24 萬／坪，低於立軒天蒔約 68.41 萬／坪。</li>
+                <li><b>生活機能不是荒地案：</b>全聯、家樂福、公園等生活圈機能是看屋文與討論常見加分點。</li>
+                <li><b>大基地、大樓高、公設完整：</b>對喜歡大社區、公設、未來題材的人有吸引力。</li>
+                <li><b>未來題材強：</b>AI 園區、產業進駐、道路建設等是銷售與網路討論常見加分敘事。</li>
+              </ul>
+            </div>
+            <div class="sentimentBox negative">
+              <h4>負面／風險議題</h4>
+              <ul class="reviewList">
+                <li><b>住辦混合是第一大風險：</b>公開資料顯示有住家、事務所、店面。要擔心的不是名稱，而是人流、租客、營業登記、管委會、公設使用與電梯分流。</li>
+                <li><b>戶數大，管理複雜：</b>大型社區可能有電梯尖峰、包裹爆量、垃圾冷藏、訪客與外送動線、管委會決策慢等問題。</li>
+                <li><b>車位不是一戶一車位：</b>公開資訊顯示車位配比不是 1:1；未來自住、出租、轉手都要評估。</li>
+                <li><b>小坪數格局容易看起來有房、住起來很擠：</b>要直接用主建物坪數檢查床、衣櫃、餐桌、冰箱、洗衣機，不要只聽 2 房／3 房。</li>
+                <li><b>廣告與未來題材很多，容易蓋過實住問題：</b>AI 園區與未來建設不能替代採光、通風、動線與貸款壓力。</li>
+                <li><b>營造商資訊要以正式文件為準：</b>不同平台資訊曾出現不一致，明天要看建照／契約附件，不要只聽口頭。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="verifyBox"><b>明天直接問：</b><br>1. 住宅與事務所是否分棟、分梯、分大廳？<br>2. 你們看的戶別登記用途是住宅還是一般事務所？<br>3. 車位剩哪些？是否可不買、可出租、可轉售？<br>4. 請把主建物坪數、陽台坪數、公設比寫在平面圖上。<br>5. 營造商、監造、保固、履約擔保是否都寫入契約附件？</div>
+        </div>
+
+        <div class="reviewCard">
+          <h3>立軒天蒔｜一眼結論</h3>
+          <div class="reviewMeta"><span class="miniPill">生活圈核心</span><span class="miniPill">單價較高</span><span class="miniPill">基地較小</span><span class="miniPill">暗房／通風要查</span></div>
+          <div class="riskSignal"><b>最需要注意：</b>這案的風險不是「沒人討論」，而是「價格較高」時，你必須確認買到的是更好的戶別、格局、社區單純度，而不是只買品牌與包裝。</div>
+          <div class="reviewSplit">
+            <div class="sentimentBox positive">
+              <h4>正向評論／被看好的點</h4>
+              <ul class="reviewList">
+                <li><b>林口在地品牌能見度高：</b>Mobile01 有過往立軒個案討論，網友常把立軒定位為林口在地建商。</li>
+                <li><b>生活圈成熟：</b>樂居評價把立軒天蒔列在家樂福生活圈核心，採買、餐飲、公園、學區被視為加分。</li>
+                <li><b>社區規模比新潤小：</b>相較 800 戶級大型社區，戶數較少，理論上管理與出入人口較單純。</li>
+                <li><b>營造與團隊資訊較清楚：</b>官網列出鴻軒營造、建築設計、公設團隊，至少比較好追問。</li>
+                <li><b>過往討論有正向售後印象：</b>Mobile01 立軒天善討論中，有網友提到立軒過往品質與售後處理印象不錯。</li>
+              </ul>
+            </div>
+            <div class="sentimentBox negative">
+              <h4>負面／風險議題</h4>
+              <ul class="reviewList">
+                <li><b>單價比新潤高：</b>樂居資料顯示平均成交價高於新潤世界都心，代表你必須問清楚貴在哪。</li>
+                <li><b>基地小：</b>基地約 471 坪。要檢查車道會車、機車位、訪客臨停、外送、垃圾、包裹區會不會壓縮。</li>
+                <li><b>仍是住商用／中心商業區：</b>不要因為戶數小就當純住宅。住宅、事務所、店面是否分流仍要查。</li>
+                <li><b>部分戶別可能有暗房或通風問題：</b>樂居格局說明提到 A6 有一間較小客臥未開窗；591 看屋文也提到部分格局有暗房／排風需求。看房時一定要逐戶確認，不要只看漂亮戶型。</li>
+                <li><b>「在地口碑」不能替代保固與驗屋：</b>即使過往討論偏正向，漏水、防水、窗框滲水、浴室排水、管道間仍要用保固條款與第三方驗屋確認。</li>
+                <li><b>關於漏水：目前未找到可證實立軒普遍漏水的公開資料。</b>我查到的 Mobile01 立軒天善討論反而有網友說當時「沒傳出漏水或瑕疵問題」。但這是單一網友心得，不等於保證，所以仍列為必查風險。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="verifyBox"><b>明天直接問：</b><br>1. 你們看的那一戶是否有暗房？臥室、浴室、廚房是否開窗？<br>2. 防水保固幾年？窗框、外牆、浴室、陽台、屋頂分別怎麼保？<br>3. 是否允許第三方驗屋？驗屋缺失多久內修繕？<br>4. 住宅、事務所、店面是否分開入口、電梯、公設、垃圾間？<br>5. 車道、機車位、外送、包裹、垃圾動線圖可以看嗎？</div>
+        </div>
       </div>
-      <details open><summary>新潤世界都心｜你明天可以做什麼</summary><ul class="reviewList"><li>請業務畫出住宅、事務所、店面的出入口、梯廳、物管櫃台、垃圾與包裹動線。</li><li>要求把「你看的戶別」用途寫清楚：住宅、一般事務所，或其他用途。</li><li>拿平面圖用實際家具尺寸檢查：雙人床、衣櫃、餐桌、沙發、冰箱、洗衣機。</li><li>不要只問總價，請拆出主建物單價、車位價格與車位是否可不買。</li><li>營造商與履約擔保請用建照、契約附件或正式文件確認，不用口頭答案。</li></ul></details>
     </div>
+
     <div class="col-12 card">
-      <h2>立軒天蒔｜網友評論與心得分類</h2>
+      <h2>兩間公司：過往評價與風險統整</h2>
       <div class="reviewGrid">
-        <div class="reviewCard"><h3>1. 地段與生活圈</h3><p><span class="tag good">較常被肯定</span>討論多把它放在林口家樂福生活圈核心來看，生活機能、公園、商圈成熟度是主要賣點之一。</p><p><span class="tag warn">延伸疑慮</span>同樣不是只看生活圈名稱，要實測從基地走到採買、站牌、停車、晚上安全感。</p></div>
-        <div class="reviewCard"><h3>2. 規劃精緻度與公設</h3><p><span class="tag good">較常被肯定</span>Mobile01 心得會提到立軒過往案場對公設、走道、停車場質感有印象，天蒔也被討論為規劃較精緻。</p><p><span class="tag warn">延伸疑慮</span>精緻公設要換算成管理費與維護成本，不能只看接待中心漂亮。</p></div>
-        <div class="reviewCard"><h3>3. 價格偏高與值不值得</h3><p><span class="tag danger">討論焦點</span>網友對立軒天蒔常見討論是「價格高不高、值不值得」。同生活圈比較時，它的單價通常會被拿來和其他案對照。</p><p><span class="tag warn">延伸疑慮</span>如果價格高，要能明確對應到地段、格局、戶數、坪效、建材、公設、車位或社區單純度。</p></div>
-        <div class="reviewCard"><h3>4. 住商混合與中心商業區</h3><p><span class="tag danger">討論焦點</span>591 看屋心得明確提醒本案為中心商業區，住家、店面、事務所混合，社區較複雜。</p><p><span class="tag warn">延伸疑慮</span>這會影響出入人口、管理規約、管委會、貸款、稅務、設籍與未來轉手族群。</p></div>
-        <div class="reviewCard"><h3>5. 格局與暗房／通風</h3><p><span class="tag warn">心得方向</span>591 看屋心得提到部分戶別受格局限制有暗房設計，需要靠排風系統維持乾燥。</p><p><span class="tag warn">延伸疑慮</span>暗房、無窗浴室、無直接採光的空間，入住後可能變成除濕與收納問題。</p></div>
-        <div class="reviewCard"><h3>6. 建商在地口碑與過往經驗</h3><p><span class="tag info">討論方向</span>立軒在林口有多個「天字輩」建案，因此網路上會有在地口碑、過往交屋與驗屋經驗討論。</p><p><span class="tag warn">延伸疑慮</span>過往案口碑只能當參考；本案仍要確認鴻軒營造、保固、建材表、交屋驗收流程。</p></div>
+        <div class="reviewCard">
+          <h3>新潤建設／新潤興業｜公司評價風險</h3>
+          <div class="reviewMeta"><span class="miniPill">上市櫃資訊較好查</span><span class="miniPill">品牌聲量高</span><span class="miniPill">本案仍要逐案檢查</span></div>
+          <div class="reviewSplit">
+            <div class="sentimentBox positive">
+              <h4>正向評論／被看好的點</h4>
+              <ul class="reviewList">
+                <li><b>品牌能見度高：</b>網路上可找到新潤過往個案與公司財務、推案討論，資訊透明度比小建商高。</li>
+                <li><b>有網友對品質與售後給過正向評價：</b>例如 Mobile01 有網友在其他新潤個案討論中提到「不漏水且肯負責改善瑕疵」。</li>
+                <li><b>銷售與產品包裝完整：</b>大型建商品牌通常較擅長公設、付款、廣告與案場體驗。</li>
+              </ul>
+            </div>
+            <div class="sentimentBox negative">
+              <h4>負面／風險議題</h4>
+              <ul class="reviewList">
+                <li><b>有人討論財務槓桿／負債疑慮：</b>Mobile01 過往曾有網友拿新潤財務負債比例討論預售風險。這不代表本案有問題，但代表你要看履約擔保與信託專戶。</li>
+                <li><b>有網友提過新潤負面新聞／環評水保個案：</b>論壇曾提到相關新聞與建商澄清。重點不是相信哪邊，而是本案要查建照、使照、環評／水保是否需要與是否完成。</li>
+                <li><b>品牌大不等於每案都適合自住：</b>本案若住辦混合、戶數大、車位不足，這些都是個案條件，不會因品牌而消失。</li>
+                <li><b>大型建商案場話術可能更成熟：</b>越會包裝越要回到文件：契約、建照、履保、實價、坪數、車位。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="riskSignal"><b>新潤公司一眼風險：</b>不是「品牌不好」，而是你不能只因為品牌大就忽略本案的住辦混合、車位、戶數與履保。預售屋最怕的是文件不清楚，不是接待中心不漂亮。</div>
+        </div>
+
+        <div class="reviewCard">
+          <h3>立軒建設／兆軒建設｜公司評價風險</h3>
+          <div class="reviewMeta"><span class="miniPill">林口在地口碑</span><span class="miniPill">中小型建案印象</span><span class="miniPill">漏水需查但未證實普遍問題</span></div>
+          <div class="reviewSplit">
+            <div class="sentimentBox positive">
+              <h4>正向評論／被看好的點</h4>
+              <ul class="reviewList">
+                <li><b>林口在地口碑：</b>Mobile01 過往立軒天善討論中，有網友整理立軒多為中小型建案，偏適合喜歡清靜單純的人。</li>
+                <li><b>建材被評為中上：</b>同一串討論有網友認為建材不是最高級，但屬中上材質。</li>
+                <li><b>售後印象偏正向：</b>該討論中有人稱就算過保固，公司仍會處理；也有其他網友說住立軒的朋友覺得品質在水準之上。</li>
+                <li><b>外觀與設計感近年較被看見：</b>網友提到較新個案外觀設計比早期更突出。</li>
+              </ul>
+            </div>
+            <div class="sentimentBox negative">
+              <h4>負面／風險議題</h4>
+              <ul class="reviewList">
+                <li><b>漏水／防水不能靠口碑跳過：</b>目前公開可查資料沒有看到立軒「普遍漏水」的可靠證據；但因你有聽到相關說法，必須要求防水保固、驗屋修繕流程白紙黑字。</li>
+                <li><b>中小型建案的限制：</b>清靜單純是優點，但基地小時，公設、車道、垃圾、包裹、機車位都可能比較吃緊。</li>
+                <li><b>在地口碑容易讓人降低戒心：</b>「林口很多人推」不等於你看的戶別採光、通風、動線、價格都合理。</li>
+                <li><b>高單價要更嚴格驗證：</b>如果買得比同區其他案貴，就要確認是不是買到更好的棟距、格局、建材、戶別與管理，而不是只買品牌。</li>
+                <li><b>過往心得多是個人感受：</b>Mobile01 上正向討論不等於官方保證；交屋後品質要靠驗屋與保固條款。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="riskSignal"><b>立軒公司一眼風險：</b>目前較像「口碑偏正向但仍要防水／售後驗證」，不是已找到明確大規模負評。你要把所有口碑轉成文件：保固年限、驗屋缺失修繕、漏水責任、管委會點交。</div>
+        </div>
       </div>
-      <details open><summary>立軒天蒔｜你明天可以做什麼</summary><ul class="reviewList"><li>請業務明確說明：住家、事務所、店面各幾戶，是否分流，是否共用公設。</li><li>把高單價拆開問：比新潤或同生活圈其他案貴的理由，是地段、格局、品牌、建材還是社區規模？</li><li>基地較小，請現場確認車道會車、垃圾車、外送、訪客臨停、機車位與包裹動線。</li><li>每個戶別都要問：是否暗房？浴室是否開窗？排風／除濕如何處理？</li><li>鴻軒營造、保固責任、建材設備與交屋標準請要求寫入正式附件。</li></ul></details>
     </div>
+
     <div class="col-12 card">
-      <h2>兩間公司評價線索：怎麼看才不會被帶風向</h2>
+      <h2>你明天要把風險問到白紙黑字</h2>
       <div class="reviewGrid">
-        <div class="reviewCard"><h3>新潤建設／新潤興業</h3><ul class="reviewList"><li><span class="tag good">優勢</span>品牌能見度高、推案多，網路資料與個案討論較容易查。</li><li><span class="tag warn">疑慮</span>大型品牌不等於每個案子都零風險，還是要查本案營造、履保、格局與管理。</li><li><span class="tag info">問法</span>「請問這個案子的營造、監造、結構、保固與過往同營造廠案例？」</li></ul></div>
-        <div class="reviewCard"><h3>立軒建設／兆軒建設</h3><ul class="reviewList"><li><span class="tag good">優勢</span>林口在地能見度高，過往天字輩個案讓網路有較多區域口碑可參考。</li><li><span class="tag warn">疑慮</span>網友對價格、商住混合、過往交屋經驗會有不同意見，需要拆成具體問題驗證。</li><li><span class="tag info">問法</span>「過往同區個案交屋後，防水、售後維修、管委會與停車場使用評價如何？」</li></ul></div>
+        <div class="reviewCard"><h3>防水／漏水</h3><ul class="reviewList"><li>外牆、窗框、浴室、陽台、屋頂防水各保固幾年？</li><li>漏水判定由誰負責？修繕期限多久？</li><li>能否第三方驗屋？缺失修繕完成後可否複驗？</li></ul></div>
+        <div class="reviewCard"><h3>住辦／住商混合</h3><ul class="reviewList"><li>住宅、事務所、店面是否分流？</li><li>是否允許營業登記、短租、工作室？</li><li>管理費、公設使用、管委會投票權怎麼算？</li></ul></div>
+        <div class="reviewCard"><h3>格局／實住性</h3><ul class="reviewList"><li>主建物到底幾坪？</li><li>哪一間是暗房？哪個浴室沒開窗？</li><li>家具尺寸標上去後，走道、收納、餐桌是否還夠？</li></ul></div>
+        <div class="reviewCard"><h3>價格／付款</h3><ul class="reviewList"><li>同生活圈實價是否支持這個價格？</li><li>貸款成數不足誰負責？</li><li>車位價格是否合理？是否可不買？</li></ul></div>
       </div>
     </div>
-    <div class="col-12 card"><h2>看論壇評價時，避免 4 種誤判</h2><div class="reviewGrid"><div class="reviewCard"><h3>1. 把個人經驗當成全案定論</h3><p>有人遇到好業務或壞業務，不代表建案本身一定好或壞。把心得轉成問題清單，現場要求文件佐證。</p></div><div class="reviewCard"><h3>2. 只看品牌，不看本案條件</h3><p>同一建商不同基地、不同營造、不同樓層戶別，風險會差很多。此頁以「本案」為主，不只看公司名。</p></div><div class="reviewCard"><h3>3. 只看開價，不看實坪與用途</h3><p>同樣總價，住宅／事務所、主建物坪數、車位價格、公設比不同，真實價值會差很多。</p></div><div class="reviewCard"><h3>4. 被未來題材蓋過現在生活</h3><p>AI 園區、道路開通、商圈發展都可當加分，但自住要先確認：現在的採買、交通、噪音、動線與安全感能不能接受。</p></div></div></div>
   </div>
 </section>
+
 <section id="cases" class="section">
   <div class="grid"><div class="col-12 card compare"><h2>兩個建案專區：明天現場重點</h2><table><thead><tr><th>項目</th><th>新潤世界都心</th><th>立軒天蒔</th><th>你們要問</th></tr></thead><tbody><tr><td>產品屬性</td><td>大型住辦混合，591 資料顯示 390 戶住家、413 戶事務所、1 戶店面。</td><td>官網揭露中心商業區，第三方資料顯示有住家、店面、辦公室／事務所產品。</td><td>我們看的戶別是住宅還是事務所？是否可設籍？貸款與稅率是否不同？</td></tr><tr><td>營造商</td><td>建商官網列暐潤營造，但第三方頁面曾有待定資訊。</td><td>官網列工程營造為鴻軒營造。</td><td>請在建照、契約或附件上確認正式營造商；若變更是否書面通知？</td></tr><tr><td>社區規模</td><td>804 戶、地上 29 層、地下 6 層，公設多但管理複雜度高。</td><td>約 153～154 戶、地上 18 層、地下 5 層，規模較小但基地也較小。</td><td>住宅與事務所是否分流？一層幾戶幾梯？尖峰電梯等待？</td></tr><tr><td>格局</td><td>591 看屋心得提到住宅部分有暗廳；需看不同戶別採光與陽台動線。</td><td>坪數 16～38 坪，需確認小坪數家具尺度、採光、樑柱與收納。</td><td>請把床、沙發、餐桌、冰箱、洗衣機尺寸標在平面圖。</td></tr><tr><td>周邊</td><td>近富貴公園、全聯，車程到家樂福與 A9；偏家樂福生活圈，不是捷運站步行核心。</td><td>文化二路二段／吉祥路口，家樂福生活圈核心感強。</td><td>實測走路到便利商店、全聯、家樂福、站牌；晚上再走一次。</td></tr><tr><td>價格比較</td><td>公開資料約 56～75 萬／坪，樂居近一年成交約 60 萬上下。</td><td>公開資料約 61～73 萬／坪，樂居近一年成交約 67～68 萬上下。</td><td>價差是否反映在戶別、坪效、純住宅程度、車位與社區單純度？</td></tr></tbody></table></div>
   <div class="col-6 card"><h2>新潤現場問題</h2><div class="checklist" id="shinList"></div></div><div class="col-6 card"><h2>立軒現場問題</h2><div class="checklist" id="liList"></div></div></div>
 </section>
 <section id="risk" class="section">
   <div class="riskWrap">
-    <div class="card"><h2>風險評分器</h2><p class="small">每項用現場資訊評估。分數越高，代表越需要暫停下訂。放大或手機版會自動改成單欄，避免選單擠壓文字。</p><div id="riskList"></div><div class="actions"><button onclick="calcRisk()">重新計算</button></div></div>
-    <div class="card"><h2>結果</h2><div class="scoreNum" id="riskScore">0</div><div id="riskAdvice" class="note">請先選擇各項風險。</div><h3>評分解讀</h3><ul><li><b>0–8：</b>資訊相對清楚，但仍要審約。</li><li><b>9–17：</b>有疑點，建議二訪與補資料。</li><li><b>18 以上：</b>不建議當天付不可退費用。</li></ul></div>
+    <div class="card">
+      <h2>風險評分器</h2>
+      <p class="small">每項用現場資訊評估。分數越高，代表越需要暫停下訂。</p>
+      <div id="riskList"></div>
+      <div class="actions"><button onclick="calcRisk()">重新計算</button></div>
+    </div>
+    <div class="card">
+      <h2>結果</h2>
+      <div class="scoreNum" id="riskScore">0</div>
+      <div id="riskAdvice" class="note">請先選擇各項風險。</div>
+      <h3>評分解讀</h3>
+      <ul><li><b>0–8：</b>資訊相對清楚，但仍要審約。</li><li><b>9–17：</b>有疑點，建議二訪與補資料。</li><li><b>18 以上：</b>不建議當天付不可退費用。</li></ul>
+    </div>
   </div>
 </section>
 <section id="sources" class="section">
